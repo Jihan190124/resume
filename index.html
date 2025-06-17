@@ -2,195 +2,258 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jihan Bhagat - Cyber Jutsu</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jihan Bhagat | Portfolio</title>
   <style>
-    * {
-      font-family: 'Orbitron', sans-serif;
-      scroll-behavior: smooth;
+    :root {
+      --bg: #fdfaf6;
+      --text: #333;
+      --accent: #2ecc71;
+      --muted: #777;
+      --border: #eaeaea;
     }
+
     body {
-      background: #f5f7fa;
-      color: #222;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
     }
-    nav {
-      background: #ffffff;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-    .hero {
-      padding: 100px 20px;
+
+    header {
+      padding: 70px 20px 40px;
       text-align: center;
-      background: linear-gradient(145deg, #ffffff, #e8ecef);
     }
-    .glow {
-      color: #2c3e50;
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
     }
-    .section {
+
+    header p {
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      padding: 15px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: #ffffffaa;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(6px);
+      z-index: 99;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
       padding: 60px 20px;
     }
-    .card {
-      background: #ffffff;
-      border: 1px solid #ddd;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      transition: transform 0.3s;
+
+    h2 {
+      color: var(--accent);
+      font-size: 1.8rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 10px;
+      margin-bottom: 20px;
     }
-    .card:hover {
-      transform: scale(1.05);
+
+    .project-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 10px;
+      list-style: none;
+      padding: 0;
     }
-    .red-box { background-color: #ffdddd; border-left: 5px solid red; padding: 20px; margin-bottom: 20px; }
-    .green-box { background-color: #ddffdd; border-left: 5px solid green; padding: 20px; margin-bottom: 20px; }
-    .orange-box { background-color: #fff3cd; border-left: 5px solid orange; padding: 20px; margin-bottom: 20px; }
-    .blue-box { background-color: #ddeeff; border-left: 5px solid #007bff; padding: 20px; margin-bottom: 20px; }
-    .yellow-box { background-color: #fff8dc; border-left: 5px solid #ffc107; padding: 20px; margin-bottom: 20px; }
+
+    .project-list li {
+      background: #ecfdf5;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border-left: 5px solid var(--accent);
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .project-list li:hover {
+      background-color: #d1fae5;
+      transform: scale(1.03);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
     footer {
-      padding: 30px;
-      background: #2c3e50;
       text-align: center;
-      color: #ffffff;
+      font-size: 0.9rem;
+      padding: 40px 20px 20px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
     }
-    .btn-custom {
-      background-color: #2c3e50;
-      color: #ffffff;
-      font-weight: bold;
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      nav { gap: 15px; font-size: 0.95rem; }
     }
-    a {
-      color: #2c3e50;
+
+    .matrix {
+      background: black;
+      color: #0f0;
+      font-family: monospace;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      white-space: pre;
+      overflow-x: auto;
+      margin-bottom: 30px;
+      box-shadow: 0 0 15px rgba(0,255,0,0.3);
+      animation: flicker 1s infinite alternate;
+      min-height: 200px;
     }
-    a:hover {
-      text-decoration: underline;
+
+    .access-box {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #001f00;
+      color: #0f0;
+      font-family: monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      z-index: 999;
+      animation: fadeOut 2s ease-in-out 2s forwards;
     }
-  </style>
+    
+    @keyframes flicker {
+        from { opacity: 0.9; }
+        to { opacity: 1; }
+    }
+    
+    @keyframes fadeOut {
+        to { opacity: 0; visibility: hidden; }
+    }
+    </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid">
-      <a class="navbar-brand glow" href="#">Jihan Bhagat</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#certs">Skills & Certs</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
-  <section class="hero">
-    <h1 class="glow">Cybersecurity × Robotics × Future Tech</h1>
-    <p>AI Innovator | Ethical Hacker | Make in India Winner</p>
-    <a href="#projects" class="btn btn-custom mt-4">View My Work</a>
-  </section>
+<div class="access-box">ACCESS GRANTED</div>
 
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="glow">About Me</h2>
-      <p>Hello! I'm Jihan Bhagat — a passionate hacker, maker, and future entrepreneur. I speak code, I punch data, and I break limits. From AI assistants to IoT systems and ethical hacking labs, I build what others dream.</p>
-      <p><strong>Languages:</strong> English, Hindi, Gujarati</p>
-      <p><strong>Achievements:</strong></p>
-      <ul>
-        <li>2× Make in India Winner – Innovation Excellence & Future Entrepreneur</li>
-        <li>District Level Player – Taekwondo and Kudo</li>
-      </ul>
-    </div>
-  </section>
+<header>
+  <h1>Jihan Bhagat</h1>
+  <p>Developer • Hacker • Creator of Tech Wonders</p>
+</header>
 
-  <section id="certs" class="section">
-    <div class="container">
-      <h2 class="glow">Skills & Certifications</h2>
+<nav>
+    <a href="#certifications">Certifications</a>
+    <a href="#hacking">Hacking (Ethical)</a>
+    <a href="#language">Coding Projects</a>
+    <a href="#arduino">Arduino</a>
+    <a href="#raspberry">Raspberry Pi</a>
+</nav>
 
-      <div class="green-box">
-        <h5>🧾 Certifications</h5>
-        <ul>
+<section id="certifications">
+  <h2>📜 Certifications & Achievements</h2>
+  <ul class="project-list">
           <li>Microsoft 365 Copilot – Prompt Engineering, Outlook, Teams</li>
           <li>EC-Council Cybersecurity Essentials, Bug Bounty, Hacking Labs</li>
           <li>IoT Security and Ethical Hacking Fundamentals</li>
           <li>C-DAC PACE - Advanced Diploma in Multilingual Programming</li>
         </ul>
-      </div>
+  </ul>
+</section>
+<section id="certifications">
+    <h2>🧰 Technical Skills</h5>
+    <ul class="project-list">
+    <li>Python, C, C++, Java</li>
+    <li>HTML, CSS, JavaScript</li>
+    <li>Arduino IDE, ESP32, Raspberry Pi</li>
+    <li>Firebase, Git, Bash</li>
+  </ul>
+</div>
+</section>
+<section id="hacking">
+  <h2>🛡️ Ethical Hacking Projects</h2>
+  <p><strong>Note:</strong> All demonstrations are done on owned devices or with explicit permission.</p>
 
-      <div class="red-box">
-        <h5>🔐 Ethical Hacking Skills</h5>
-        <ul>
-          <li>Wi-Fi Scanning, Deauth, Honeypot Cloning (ESP32)</li>
-          <li>Dark Web Investigation and NAS Enumeration</li>
-          <li>Linux Terminal & Kali Automation</li>
-          <li>Location Tracking, Phishing, RAT, Android/Windows Unlock</li>
-        </ul>
-      </div>
+  <div class="matrix" id="matrixBox"></div>
 
-      <div class="yellow-box">
-        <h5>🧰 Technical Skills</h5>
-        <ul>
-          <li>Python, C, C++, Java</li>
-          <li>HTML, CSS, JavaScript</li>
-          <li>Arduino IDE, ESP32, Raspberry Pi</li>
-          <li>Firebase, Git, Bash</li>
-        </ul>
-      </div>
+  <ul class="project-list">
+    <li>Location Tracking</li>
+    <li>Bypassing Lock (Android, Windows, Ola Scooter)</li>
+    <li>WiFi Handshake Capture</li>
+    <li>Phishing Simulations</li>
+    <li>Remote Access Tools (RAT)</li>
+  </ul>
+</section>
+<section id="arduino">
+    <h2>🔌 Arduino Projects</h2>
+  <ul class="project-list">
+    <li>Fastag Model</li>
+    <li>Soil Moisture Measurement System</li>
+    <li>Automated Irrigation System</li>
+    <li>Self-Balancing Robot</li>
+    <li>Human Following Car</li>
+    <li>Bluetooth Car</li>
+    <li>Remote Control Car using Arduino</li>
+    <li>Distance Measurement System</li>
+    <li>WiFi-enabled Automatic Irrigation System</li>
+  </ul>
+</section>
 
-      <div class="orange-box">
-        <h5>🧠 Software & Language-Based Projects</h5>
-        <ul>
-          <li>Flappy Bird (Python)</li>
-          <li>Nokia Snake Game (C/C++)</li>
-          <li>Heron’s Formula Calculator (Java)</li>
-          <li>Interactive Webpages (HTML/CSS/JS)</li>
-          <li>Voice Desktop Assistant (Python + JS + HTML/CSS)</li>
-        </ul>
-      </div>
+<section id="raspberry">
+  <h2>🍓 Raspberry Pi Projects</h2>
+  <ul class="project-list">
+    <li>Human Tracking Mechanism</li>
+    <li>Automated Door Security System</li>
+    <li>Alexa Integration at Home</li>
+    <li>Hacker's Workspace using Raspberry Pi & Kali Linux</li>
+  </ul>
+</section>
 
-      <div class="blue-box">
-        <h5>🧪 Arduino Projects</h5>
-        <ul>
-          <li>Fastag Model, Soil Moisture Meter</li>
-          <li>Automated Irrigation System, WiFi Irrigation System</li>
-          <li>Bluetooth/Remote Car, Self-Balancing Robot, Distance Sensor</li>
-          <li>Human Following Car</li>
-        </ul>
-      </div>
+<section id="language">
+  <h2>💻 Language-Based Projects</h2>
+  <ul class="project-list">
+    <li>Flappy Bird (Python)</li>
+    <li>Iconic Nokia's Snake Game (C and C++)</li>
+    <li>Heron's Formula Calculator (Java)</li>
+    <li>Several Interactive Webpages (HTML, CSS, JavaScript)</li>
+    <li>Desktop Assistant (Python + HTML + JS)</li>
+  </ul>
+</section>
 
-      <div class="green-box">
-        <h5>🍓 Raspberry Pi Projects</h5>
-        <ul>
-          <li>Human Tracking Mechanism</li>
-          <li>Automated Door Security System</li>
-          <li>Alexa-Integrated Smart Home</li>
-          <li>Kali Linux Hacker’s Workspace</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+  
+<footer>
+  &copy; 2025 Jihan Bhagat | All rights reserved.
+</footer>
 
-  <section id="projects" class="section">
-    <div class="container">
-      <h2 class="glow">Projects</h2>
-      <ul>
-        <li>⚡ <strong>AgroHydros</strong> – Intelligent Irrigation System (AI + ESP32)</li>
-        <li>🕶️ <strong>JARVIS Smart Glass</strong> – Wearable AI Assistant (Voice Controlled)</li>
-        <li>💀 <strong>ESP32 Evil Twin</strong> – Ethical Hacking Honeypot Simulator</li>
-        <li>🧠 <strong>Gemini + Python Assistant</strong> – JARVIS-style custom voice AI</li>
-      </ul>
-    </div>
-  </section>
+<script>
+  const text = `root@jihan:~# nmap -A 192.168.1.1\nStarting Nmap 7.91 ( https://nmap.org ) at 2025-06-17 12:00 IST\nNmap scan report for 192.168.1.1\nHost is up (0.00038s latency).\nPORT   STATE SERVICE VERSION\n22/tcp open  ssh     OpenSSH 7.6p1\n80/tcp open  http    Apache httpd 2.4.29`;
+  const box = document.getElementById("matrixBox");
+  let i = 0;
+  function typeLine() {
+    if (i < text.length) {
+      box.innerHTML += text[i] === "\n" ? "<br>" : text[i];
+      i++;
+      setTimeout(typeLine, 20);
+    }
+  }
+  window.addEventListener("load", typeLine);
+</script>
 
-  <section id="contact" class="section">
-    <div class="container text-center">
-      <h2 class="glow">Contact Me</h2>
-      <p>Email: <a href="mailto:jihanbhagat@gmail.com">jihanbhagat@gmail.com</a></p>
-      <p>Phone: <a href="tel:+918160819720">+91 81608 19720</a></p>
-      <p><a href="https://www.linkedin.com/in/jihan-bhagat" target="_blank">LinkedIn Profile</a></p>
-    </div>
-  </section>
-
-  <footer>
-    Built by Jihan Bhagat • © 2025 • Powered by Dreams + Bootstrap
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
