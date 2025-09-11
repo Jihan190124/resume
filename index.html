@@ -1,259 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jihan Bhagat | Portfolio</title>
-  <style>
-    :root {
-      --bg: #fdfaf6;
-      --text: #333;
-      --accent: #2ecc71;
-      --muted: #777;
-      --border: #eaeaea;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
-
-    header {
-      padding: 70px 20px 40px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
-
-    header p {
-      color: var(--muted);
-      font-size: 1.1rem;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 25px;
-      padding: 15px;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      background: #ffffffaa;
-      position: sticky;
-      top: 0;
-      backdrop-filter: blur(6px);
-      z-index: 99;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 60px 20px;
-    }
-
-    h2 {
-      color: var(--accent);
-      font-size: 1.8rem;
-      border-left: 4px solid var(--accent);
-      padding-left: 10px;
-      margin-bottom: 20px;
-    }
-
-    .project-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 10px;
-      list-style: none;
-      padding: 0;
-    }
-
-    .project-list li {
-      background: #ecfdf5;
-      padding: 10px 15px;
-      border-radius: 8px;
-      border-left: 5px solid var(--accent);
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-
-    .project-list li:hover {
-      background-color: #d1fae5;
-      transform: scale(1.03);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      padding: 40px 20px 20px;
-      color: var(--muted);
-      border-top: 1px solid var(--border);
-    }
-
-    @media (max-width: 600px) {
-      header h1 { font-size: 2rem; }
-      nav { gap: 15px; font-size: 0.95rem; }
-    }
-
-    .matrix {
-      background: black;
-      color: #0f0;
-      font-family: monospace;
-      padding: 20px;
-      border-radius: 10px;
-      font-size: 0.9rem;
-      white-space: pre;
-      overflow-x: auto;
-      margin-bottom: 30px;
-      box-shadow: 0 0 15px rgba(0,255,0,0.3);
-      animation: flicker 1s infinite alternate;
-      min-height: 200px;
-    }
-
-    .access-box {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: #001f00;
-      color: #0f0;
-      font-family: monospace;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
-      z-index: 999;
-      animation: fadeOut 2s ease-in-out 2s forwards;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jihan Bhagat - Full Stack Developer & IoT Engineer</title>
+    <meta name="description" content="Jihan Bhagat - Full Stack Developer, IoT Engineer, and AI Automation Specialist. Building innovative web apps, mobile solutions, and smart IoT systems.">
+    <meta name="keywords" content="Full Stack Developer, IoT Engineer, AI Automation, Web Development, Mobile Apps, Ethical Hacking, ESP32, Raspberry Pi">
     
-    @keyframes flicker {
-        from { opacity: 0.9; }
-        to { opacity: 1; }
-    }
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    @keyframes fadeOut {
-        to { opacity: 0; visibility: hidden; }
-    }
-    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-text">&lt;Jihan/&gt;</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-<div class="access-box">ACCESS GRANTED</div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-particles"></div>
+        <div class="hero-content">
+            <div class="glitch-container">
+                <h1 class="hero-title glitch" data-text="Hi, I'm Jihan Bhagat">Hi, I'm Jihan Bhagat</h1>
+            </div>
+            <p class="hero-subtitle typing-effect">Full Stack Developer • IoT Engineer • AI + Automation Specialist</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary glow-btn" onclick="scrollToSection('projects')">
+                    <i class="fas fa-rocket"></i>
+                    View Projects
+                </button>
+                <button class="btn btn-outline pulse-btn" onclick="scrollToSection('contact')">
+                    <i class="fas fa-handshake"></i>
+                    Hire Me
+                </button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
 
-<header>
-  <h1>Jihan Bhagat</h1>
-  <p>Developer • Hacker • Creator of Tech Wonders</p>
-</header>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title rainbow-text">About Me</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-frame">
+                        <img src="jihan.jpg" alt="Jihan Bhagat">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-buttons">
+                                <span class="btn-red"></span>
+                                <span class="btn-yellow"></span>
+                                <span class="btn-green"></span>
+                            </div>
+                            <span class="terminal-title">about_jihan.txt</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p>Hi, I'm Jihan Bhagat — a developer and ethical hacker with a passion for building smart, practical, and innovative solutions. I work across web development, mobile apps, IoT systems, AI, and automation, creating projects that combine creativity with real-world impact.</p>
+                            <br>
+                            <p>From ESP32-powered devices and Firebase-integrated apps to AI chatbots and security demos, I love turning ideas into functional technology. My goal is simple: to deliver reliable, high-quality solutions that help people and businesses thrive in the digital world.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<nav>
-    <a href="#certifications">Certifications</a>
-    <a href="#hacking">Hacking (Ethical)</a>
-    <a href="#language">Coding Projects</a>
-    <a href="#arduino">Arduino</a>
-    <a href="#raspberry">Raspberry Pi</a>
-</nav>
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Services</h2>
+                <p class="section-subtitle">Building innovative solutions across multiple domains</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-color="cyan">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Modern, responsive web applications using latest technologies</p>
+                </div>
+                <div class="service-card" data-color="purple">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Apps</h3>
+                    <p>Cross-platform mobile applications with seamless user experience</p>
+                </div>
+                <div class="service-card" data-color="orange">
+                    <div class="service-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>IoT & Automation</h3>
+                    <p>Smart IoT solutions and home automation systems</p>
+                </div>
+                <div class="service-card" data-color="green">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI & Chatbots</h3>
+                    <p>Intelligent AI solutions and conversational chatbots</p>
+                </div>
+                <div class="service-card" data-color="red">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Ethical Hacking</h3>
+                    <p>Educational security demonstrations and penetration testing</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="certifications">
-  <h2>📜 Certifications & Achievements</h2>
-  <ul class="project-list">
-          <li>Microsoft 365 Copilot – Prompt Engineering, Outlook, Teams</li>
-          <li>EC-Council Cybersecurity Essentials, Bug Bounty, Hacking Labs</li>
-          <li>IoT Security and Ethical Hacking Fundamentals</li>
-          <li>C-DAC PACE - Advanced Diploma in Multilingual Programming</li>
-        </ul>
-  </ul>
-</section>
-<section id="certifications">
-    <h2>🧰 Technical Skills</h5>
-    <ul class="project-list">
-    <li>Python, C, C++, Java</li>
-    <li>HTML, CSS, JavaScript</li>
-    <li>Arduino IDE, ESP32, Raspberry Pi</li>
-    <li>Firebase, Git, Bash</li>
-  </ul>
-</div>
-</section>
-<section id="hacking">
-  <h2>🛡️ Ethical Hacking Projects</h2>
-  <p><strong>Note:</strong> All demonstrations are done on owned devices or with explicit permission.</p>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Projects</h2>
+                <p class="section-subtitle">A showcase of my technical expertise across different domains</p>
+            </div>
+            
+            <!-- Project Categories -->
+            <div class="project-categories">
+                <button class="category-btn active" data-category="all">All Projects</button>
+                <button class="category-btn" data-category="arduino">Arduino/ESP32</button>
+                <button class="category-btn" data-category="raspberry">Raspberry Pi</button>
+                <button class="category-btn" data-category="software">Software</button>
+            </div>
 
-  <div class="matrix" id="matrixBox"></div>
+            <!-- Arduino/ESP32 Projects -->
+            <div class="project-category" data-category="arduino">
+                <h3 class="category-title neon-green">Arduino / ESP32 Projects</h3>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>Smart Irrigation System</h4>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <p>Soil moisture sensors with web dashboard for automated watering</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">ESP32</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">React</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>WiFi Automatic Irrigation</h4>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <p>Remote-controlled irrigation system with mobile app integration</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">ESP32</span>
+                            <span class="tech-tag">WiFi</span>
+                            <span class="tech-tag">Mobile App</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>Bluetooth Controlled Car</h4>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <p>Arduino-based remote control car with Bluetooth connectivity</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Arduino</span>
+                            <span class="tech-tag">Bluetooth</span>
+                            <span class="tech-tag">Mobile Control</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>IoT Weather Station</h4>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <p>ESP32-powered weather monitoring with OpenWeatherMap integration</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">ESP32</span>
+                            <span class="tech-tag">OpenWeatherMap API</span>
+                            <span class="tech-tag">Sensors</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-  <ul class="project-list">
-    <li>Location Tracking</li>
-    <li>Bypassing Lock (Android, Windows, Ola Scooter)</li>
-    <li>WiFi Handshake Capture</li>
-    <li>Phishing Simulations</li>
-    <li>Remote Access Tools (RAT)</li>
-  </ul>
-</section>
-<section id="arduino">
-    <h2>🔌 Arduino Projects</h2>
-  <ul class="project-list">
-    <li>Fastag Model</li>
-    <li>Soil Moisture Measurement System</li>
-    <li>Automated Irrigation System</li>
-    <li>Self-Balancing Robot</li>
-    <li>Human Following Car</li>
-    <li>Bluetooth Car</li>
-    <li>Remote Control Car using Arduino</li>
-    <li>Distance Measurement System</li>
-    <li>WiFi-enabled Automatic Irrigation System</li>
-  </ul>
-</section>
+            <!-- Raspberry Pi Projects -->
+            <div class="project-category" data-category="raspberry">
+                <h3 class="category-title neon-purple">Raspberry Pi Projects</h3>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>Door Security System</h4>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <p>Camera-based face detection for secure door access control</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Raspberry Pi</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">Face Recognition</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>Human Tracking System</h4>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <p>Real-time person tracking system using computer vision</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Raspberry Pi</span>
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>Smart Mirror</h4>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <p>Interactive mirror with weather, calendar and news display</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Raspberry Pi</span>
+                            <span class="tech-tag">Display</span>
+                            <span class="tech-tag">APIs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<section id="raspberry">
-  <h2>🍓 Raspberry Pi Projects</h2>
-  <ul class="project-list">
-    <li>Human Tracking Mechanism</li>
-    <li>Automated Door Security System</li>
-    <li>Alexa Integration at Home</li>
-    <li>Hacker's Workspace using Raspberry Pi & Kali Linux</li>
-  </ul>
-</section>
+            <!-- Software Projects -->
+            <div class="project-category" data-category="software">
+                <h3 class="category-title neon-orange">Language-Based Projects</h3>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>Flappy Bird Clone</h4>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <p>Recreation of the popular mobile game with Python and Pygame</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Pygame</span>
+                            <span class="tech-tag">Game Development</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>Desktop Assistant</h4>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <p>AI-powered desktop assistant with voice commands</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Speech Recognition</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="language">
-  <h2>💻 Language-Based Projects</h2>
-  <ul class="project-list">
-    <li>Flappy Bird (Python)</li>
-    <li>Iconic Nokia's Snake Game (C and C++)</li>
-    <li>Heron's Formula Calculator (Java)</li>
-    <li>Several Interactive Webpages (HTML, CSS, JavaScript)</li>
-    <li>Desktop Assistant (Python + HTML + JS)</li>
-  </ul>
-</section>
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Certifications</h2>
+                <p class="section-subtitle">Continuous learning and professional development</p>
+            </div>
+            <div class="certifications-grid">
+                <div class="cert-category">
+                    <div class="cert-header">
+                        <i class="fas fa-shield-alt neon-green"></i>
+                        <h3>EC-Council Certifications (2025)</h3>
+                    </div>
+                    <ul class="cert-list">
+                        <li><i class="fas fa-certificate"></i> Android Bug Bounty Hunting: Hunt Like a Rat</li>
+                        <li><i class="fas fa-certificate"></i> Introduction to Dark Web, Anonymity & Cryptocurrency</li>
+                        <li><i class="fas fa-certificate"></i> Introduction to SAN and NAS Storage</li>
+                        <li><i class="fas fa-certificate"></i> Make In-house Hacking & Pentesting Lab</li>
+                    </ul>
+                </div>
+                <div class="cert-category">
+                    <div class="cert-header">
+                        <i class="fas fa-microsoft neon-cyan"></i>
+                        <h3>Microsoft 365 Copilot</h3>
+                    </div>
+                    <ul class="cert-list">
+                        <li><i class="fas fa-certificate"></i> Excel with Copilot: AI-Driven Data Analysis (2025)</li>
+                        <li><i class="fas fa-certificate"></i> Outlook Copilot: Maximize Workday Efficiency (2025)</li>
+                        <li><i class="fas fa-certificate"></i> Teams Copilot: AI-Powered Collaboration (2024)</li>
+                        <li><i class="fas fa-certificate"></i> Learning Microsoft 365 Copilot (2024)</li>
+                    </ul>
+                </div>
+                <div class="cert-category">
+                    <div class="cert-header">
+                        <i class="fas fa-graduation-cap neon-purple"></i>
+                        <h3>C-DAC PACE (2024)</h3>
+                    </div>
+                    <ul class="cert-list">
+                        <li><i class="fas fa-certificate"></i> Advanced Diploma in Multilingual Programming</li>
+                        <li><i class="fas fa-certificate"></i> Java, C, C++, HTML, CSS, JavaScript</li>
+                        <li><i class="fas fa-certificate"></i> Excel, PowerPoint, Advanced Office Suite</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  
-<footer>
-  &copy; 2025 Jihan Bhagat | All rights reserved.
-</footer>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Ready to bring your ideas to life? Let's connect and build something amazing.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <i class="fas fa-user form-icon"></i>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <i class="fas fa-envelope form-icon"></i>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <i class="fas fa-comment form-icon"></i>
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script>
-  const text = `root@jihan:~# nmap -A 192.168.1.1\nStarting Nmap 7.91 ( https://nmap.org ) at 2025-06-17 12:00 IST\nNmap scan report for 192.168.1.1\nHost is up (0.00038s latency).\nPORT   STATE SERVICE VERSION\n22/tcp open  ssh     OpenSSH 7.6p1\n80/tcp open  http    Apache httpd 2.4.29`;
-  const box = document.getElementById("matrixBox");
-  let i = 0;
-  function typeLine() {
-    if (i < text.length) {
-      box.innerHTML += text[i] === "\n" ? "<br>" : text[i];
-      i++;
-      setTimeout(typeLine, 20);
-    }
-  }
-  window.addEventListener("load", typeLine);
-</script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Jihan Bhagat | All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link" data-tooltip="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link" data-tooltip="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link" data-tooltip="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="#" class="social-link" data-tooltip="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Built with HTML, CSS & JavaScript</p>
+            </div>
+        </div>
+    </footer>
 
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Message Sent Successfully!</h3>
+            <p>Thanks for reaching out. I'll get back to you soon.</p>
+            <button class="btn btn-primary" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
