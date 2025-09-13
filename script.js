@@ -438,20 +438,41 @@ const debouncedScrollHandler = debounce(() => {
 }, 10);
 
 window.addEventListener('scroll', debouncedScrollHandler);
+// Console Easter Egg 2.0 🚀
+const styles = [
+  'color: #ff006e; font-size: 14px; font-weight: bold; font-family: monospace;',
+  'color: #8338ec; font-size: 14px; font-weight: bold; font-family: monospace;',
+  'color: #3a86ff; font-size: 14px; font-weight: bold; font-family: monospace;',
+  'color: #00f5d4; font-size: 14px; font-weight: bold; font-family: monospace;',
+  'color: #ffbe0b; font-size: 14px; font-weight: bold; font-family: monospace;'
+];
 
-// Console easter egg
-console.log(`
-%c
-╔═══════════════════════════════════════╗
-║                                       ║
-║     Welcome to Jihan's Portfolio!     ║
-║                                       ║
-║   Full Stack Developer • IoT Engineer ║
-║        AI + Automation Specialist     ║
-║                                       ║
-║     Built with HTML, CSS & JS        ║
-║                                       ║
-╚═══════════════════════════════════════╝
-`, 'color: #00ff88; font-family: monospace; font-size: 12px;');
 
-console.log('%cLooking for a developer? Let\'s connect! 🚀', 'color: #00ffff; font-size: 16px; font-weight: bold;');
+// Paste this directly into the browser DevTools console (Cmd+Option+J on Mac)
+(() => {
+  const styles = [
+    'color: #ff006e; font-size: 14px; font-weight: bold;',
+    'color: #ffbe0b; font-size: 14px; font-weight: bold;',
+    'color: #3a86ff; font-size: 14px; font-weight: bold;',
+    'color: #8338ec; font-size: 14px; font-weight: bold;',
+    'color: #06d6a0; font-size: 14px; font-weight: bold;',
+    'color: #ef476f; font-size: 14px; font-weight: bold;',
+  ];
+
+  const banner = `%c
+
+
+                                                         
+🌌 Welcome to Jihan's Playground of Madness! 🌌       
+👨‍💻 Full Stack Developer • IoT Wizard • AI Tamer 🤖   
+⚡ Automation Maniac • Hardware Hacker • Coffee Junkie ☕
+🚨 WHY THE F*** ARE YOU HERE STALKING?? 🚨       
+💀 Go touch some grass OR hire me instead 💼         
+`;
+
+  console.log(banner, styles[0]);
+  console.log(
+    '%c👉 Psst... If you\'re still here, DM me & let\'s collab 🔥',
+    'color: #ff006e; font-size: 16px; font-weight: bold; text-shadow: 1px 1px #000;'
+  );
+})();

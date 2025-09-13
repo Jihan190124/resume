@@ -12,7 +12,9 @@
     
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -46,7 +48,7 @@
             <div class="glitch-container">
                 <h1 class="hero-title glitch" data-text="Hi, I'm Jihan Bhagat">Hi, I'm Jihan Bhagat</h1>
             </div>
-            <p class="hero-subtitle typing-effect">Full Stack Developer • IoT Engineer • AI + Automation Specialist</p>
+            <p class="hero-subtitle typing-effect">Full Stack Developer • IoT Engineer •Automation</p>
             <div class="hero-buttons">
                 <button class="btn btn-primary glow-btn" onclick="scrollToSection('projects')">
                     <i class="fas fa-rocket"></i>
@@ -138,9 +140,34 @@
                     <div class="service-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Ethical Hacking</h3>
-                    <p>Educational security demonstrations and penetration testing</p>
+                    <h3>Cyber Security</h3>
+                    <p>Educational security demonstrations</p>
                 </div>
+              <div class="service-card" data-color="pink">
+  <div class="service-icon">
+    <i class="fas fa-paint-brush"></i>
+  </div>
+  <h3>Designing</h3>
+  <p>
+    Creative solutions including logo design, presentation (PPT) creation, 
+    and social media graphics. We also provide branding kits and 
+    professional layouts for marketing.
+  </p>
+</div>
+<div class="service-card" data-color="orange">
+  <div class="service-icon">
+    <i class="fas fa-rocket"></i>
+  </div>
+  <h3>Startup Launch Package</h3>
+  <p>
+    All-in-one solution for new businesses: 
+    website design & development, domain setup, 
+    hosting and launch, custom logo creation, 
+    branding kit, and pitch-ready presentations 
+    to kickstart your startup with impact.
+  </p>
+</div>
+
             </div>
         </div>
     </section>
@@ -162,162 +189,525 @@
             </div>
 
             <!-- Arduino/ESP32 Projects -->
-            <div class="project-category" data-category="arduino">
-                <h3 class="category-title neon-green">Arduino / ESP32 Projects</h3>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h4>Smart Irrigation System</h4>
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                        <p>Soil moisture sensors with web dashboard for automated watering</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">ESP32</span>
-                            <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">React</span>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h4>WiFi Automatic Irrigation</h4>
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                        <p>Remote-controlled irrigation system with mobile app integration</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">ESP32</span>
-                            <span class="tech-tag">WiFi</span>
-                            <span class="tech-tag">Mobile App</span>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h4>Bluetooth Controlled Car</h4>
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                        <p>Arduino-based remote control car with Bluetooth connectivity</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Arduino</span>
-                            <span class="tech-tag">Bluetooth</span>
-                            <span class="tech-tag">Mobile Control</span>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h4>IoT Weather Station</h4>
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                        <p>ESP32-powered weather monitoring with OpenWeatherMap integration</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">ESP32</span>
-                            <span class="tech-tag">OpenWeatherMap API</span>
-                            <span class="tech-tag">Sensors</span>
-                        </div>
-                    </div>
-                </div>
+             <div class="project-category" data-category="arduino">
+    <h3 class="category-title neon-green">Arduino / ESP32 Projects</h3>
+    <div class="projects-grid">
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Smart Irrigation System</h4>
+                <div class="project-links"></div>
             </div>
-
-            <!-- Raspberry Pi Projects -->
-            <div class="project-category" data-category="raspberry">
-                <h3 class="category-title neon-purple">Raspberry Pi Projects</h3>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h4>Door Security System</h4>
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                        <p>Camera-based face detection for secure door access control</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Raspberry Pi</span>
-                            <span class="tech-tag">OpenCV</span>
-                            <span class="tech-tag">Face Recognition</span>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h4>Human Tracking System</h4>
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                        <p>Real-time person tracking system using computer vision</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Raspberry Pi</span>
-                            <span class="tech-tag">Computer Vision</span>
-                            <span class="tech-tag">Python</span>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h4>Smart Mirror</h4>
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                        <p>Interactive mirror with weather, calendar and news display</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Raspberry Pi</span>
-                            <span class="tech-tag">Display</span>
-                            <span class="tech-tag">APIs</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Software Projects -->
-            <div class="project-category" data-category="software">
-                <h3 class="category-title neon-orange">Language-Based Projects</h3>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h4>Flappy Bird Clone</h4>
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                        <p>Recreation of the popular mobile game with Python and Pygame</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Pygame</span>
-                            <span class="tech-tag">Game Development</span>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h4>Desktop Assistant</h4>
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                        <p>AI-powered desktop assistant with voice commands</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Speech Recognition</span>
-                        </div>
-                    </div>
-                </div>
+            <p>Soil moisture sensors with web dashboard for automated watering</p>
+            <div class="project-tech">
+                <span class="tech-tag">ESP32</span>
+                <span class="tech-tag">Firebase</span>
+                <span class="tech-tag">React</span>
             </div>
         </div>
-    </section>
+
+        <div class="project-card">
+            <div class="project-header">
+                <h4>WiFi Automatic Irrigation</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Remote-controlled irrigation system with mobile app integration</p>
+            <div class="project-tech">
+                <span class="tech-tag">ESP32</span>
+                <span class="tech-tag">WiFi</span>
+                <span class="tech-tag">Mobile App</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Bluetooth Controlled Car</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Arduino-based remote control car with Bluetooth connectivity</p>
+            <div class="project-tech">
+                <span class="tech-tag">Arduino</span>
+                <span class="tech-tag">Bluetooth</span>
+                <span class="tech-tag">Mobile Control</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <h4>IoT Weather Station</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>ESP32-powered weather monitoring with OpenWeatherMap integration</p>
+            <div class="project-tech">
+                <span class="tech-tag">ESP32</span>
+                <span class="tech-tag">OpenWeatherMap API</span>
+                <span class="tech-tag">Sensors</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Smart Home Automation</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Wi-Fi controlled smart lights, fans, and appliances</p>
+            <div class="project-tech">
+                <span class="tech-tag">ESP32</span>
+                <span class="tech-tag">Relay Module</span>
+                <span class="tech-tag">Mobile App</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <h4>RFID Door Lock System</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Secure door access using RFID cards and Arduino</p>
+            <div class="project-tech">
+                <span class="tech-tag">Arduino</span>
+                <span class="tech-tag">RFID</span>
+                <span class="tech-tag">Security</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <h4>ESP32 Camera Surveillance</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Wi-Fi live streaming camera system with ESP32-CAM</p>
+            <div class="project-tech">
+                <span class="tech-tag">ESP32-CAM</span>
+                <span class="tech-tag">Streaming</span>
+                <span class="tech-tag">Security</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Voice Controlled Home Devices</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Smart appliances controlled via Google Assistant or Alexa</p>
+            <div class="project-tech">
+                <span class="tech-tag">ESP32</span>
+                <span class="tech-tag">IoT</span>
+                <span class="tech-tag">Voice Assistant</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Air Quality Monitoring</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Tracks PM2.5, CO2, and temperature with cloud dashboard</p>
+            <div class="project-tech">
+                <span class="tech-tag">ESP32</span>
+                <span class="tech-tag">MQ Sensors</span>
+                <span class="tech-tag">Firebase</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <h4>ESP32 Drone Controller</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Custom-built drone controller with wireless communication</p>
+            <div class="project-tech">
+                <span class="tech-tag">ESP32</span>
+                <span class="tech-tag">RC Control</span>
+                <span class="tech-tag">Drone</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Gesture Controlled Robot</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Robot car controlled with hand gestures via accelerometer</p>
+            <div class="project-tech">
+                <span class="tech-tag">Arduino</span>
+                <span class="tech-tag">Accelerometer</span>
+                <span class="tech-tag">Robotics</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <h4>LoRa Communication System</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Long-range wireless communication between ESP32 boards</p>
+            <div class="project-tech">
+                <span class="tech-tag">ESP32</span>
+                <span class="tech-tag">LoRa</span>
+                <span class="tech-tag">IoT</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Health Monitoring Band</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Wearable system to track heart rate and body temperature</p>
+            <div class="project-tech">
+                <span class="tech-tag">ESP32</span>
+                <span class="tech-tag">Pulse Sensor</span>
+                <span class="tech-tag">Wearable</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <h4>ESP32 Smart Glasses</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Augmented reality smart glasses with tiny OLED display</p>
+            <div class="project-tech">
+                <span class="tech-tag">ESP32</span>
+                <span class="tech-tag">OLED</span>
+                <span class="tech-tag">Wearable</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Home Energy Monitor</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Tracks real-time energy consumption with IoT dashboard</p>
+            <div class="project-tech">
+                <span class="tech-tag">Arduino</span>
+                <span class="tech-tag">ESP32</span>
+                <span class="tech-tag">IoT</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Raspberry Pi Projects -->
+<div class="project-category" data-category="raspberry">
+    <h3 class="category-title neon-purple">Raspberry Pi Projects</h3>
+    <div class="projects-grid">
+        <!-- Security & Vision -->
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Door Security System</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Camera-based face detection for secure door access control</p>
+            <div class="project-tech">
+                <span class="tech-tag">Raspberry Pi</span>
+                <span class="tech-tag">OpenCV</span>
+                <span class="tech-tag">Face Recognition</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Human Tracking System</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Real-time person tracking system using computer vision</p>
+            <div class="project-tech">
+                <span class="tech-tag">Raspberry Pi</span>
+                <span class="tech-tag">Computer Vision</span>
+                <span class="tech-tag">Python</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+                <h4>AI Object Detection Camera</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Smart camera system with TensorFlow for object recognition</p>
+            <div class="project-tech">
+                <span class="tech-tag">Raspberry Pi</span>
+                <span class="tech-tag">TensorFlow</span>
+                <span class="tech-tag">OpenCV</span>
+            </div>
+        </div>
+
+        <!-- Smart Home & IoT -->
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Smart Mirror</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Interactive mirror with weather, calendar and news display</p>
+            <div class="project-tech">
+                <span class="tech-tag">Raspberry Pi</span>
+                <span class="tech-tag">Display</span>
+                <span class="tech-tag">APIs</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Home Automation Hub</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>IoT-based automation system for controlling appliances</p>
+            <div class="project-tech">
+                <span class="tech-tag">Raspberry Pi</span>
+                <span class="tech-tag">MQTT</span>
+                <span class="tech-tag">IoT</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Weather Station</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Real-time weather monitoring with sensors and dashboard</p>
+            <div class="project-tech">
+                <span class="tech-tag">Raspberry Pi</span>
+                <span class="tech-tag">Sensors</span>
+                <span class="tech-tag">Cloud</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Smart Garden</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Automated plant watering and monitoring system</p>
+            <div class="project-tech">
+                <span class="tech-tag">Raspberry Pi</span>
+                <span class="tech-tag">Soil Sensor</span>
+                <span class="tech-tag">IoT</span>
+            </div>
+        </div>
+
+        <!-- Media & Entertainment -->
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Retro Gaming Console</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Classic gaming console with RetroPie and emulators</p>
+            <div class="project-tech">
+                <span class="tech-tag">Raspberry Pi</span>
+                <span class="tech-tag">RetroPie</span>
+                <span class="tech-tag">Emulation</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Media Server</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Local Plex/Kodi server for movies, music, and streaming</p>
+            <div class="project-tech">
+                <span class="tech-tag">Raspberry Pi</span>
+                <span class="tech-tag">Plex</span>
+                <span class="tech-tag">Kodi</span>
+            </div>
+        </div>
+
+        <!-- Robotics -->
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Line Following Robot</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Robot that follows a path using IR sensors and Pi control</p>
+            <div class="project-tech">
+                <span class="tech-tag">Raspberry Pi</span>
+                <span class="tech-tag">Robotics</span>
+                <span class="tech-tag">Python</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Drone Control System</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Raspberry Pi powered drone with camera and remote control</p>
+            <div class="project-tech">
+                <span class="tech-tag">Raspberry Pi</span>
+                <span class="tech-tag">Drone</span>
+                <span class="tech-tag">Computer Vision</span>
+            </div>
+        </div>
+
+        <!-- Networking & Security -->
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Pi-Hole Ad Blocker</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Network-wide ad blocker for all devices on the LAN</p>
+            <div class="project-tech">
+                <span class="tech-tag">Raspberry Pi</span>
+                <span class="tech-tag">DNS</span>
+                <span class="tech-tag">Networking</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Network Intrusion Detector</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Monitors network packets for suspicious activities</p>
+            <div class="project-tech">
+                <span class="tech-tag">Raspberry Pi</span>
+                <span class="tech-tag">Wireshark</span>
+                <span class="tech-tag">Security</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--software projects-->
+<div class="project-category" data-category="software">
+    <h3 class="category-title neon-orange">Language-Based Projects</h3>
+    <div class="projects-grid">
+        <!-- Python Projects -->
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Chatbot with NLP</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Smart chatbot that answers queries using Natural Language Processing</p>
+            <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">NLTK</span>
+                <span class="tech-tag">Machine Learning</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Expense Tracker</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Personal finance tracker with data visualization and reports</p>
+            <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">SQLite</span>
+                <span class="tech-tag">Matplotlib</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Web Scraper</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Tool to scrape live data from websites and store in a database</p>
+            <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">BeautifulSoup</span>
+                <span class="tech-tag">Automation</span>
+            </div>
+        </div>
+
+        <!-- C Projects -->
+        <div class="project-card">
+            <div class="project-header">
+                <h4>ATM Simulation</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Console-based ATM system with PIN validation and balance updates</p>
+            <div class="project-tech">
+                <span class="tech-tag">C</span>
+                <span class="tech-tag">File Handling</span>
+                <span class="tech-tag">Console App</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Hospital Management System</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Tracks patients, doctors, and appointment records in console UI</p>
+            <div class="project-tech">
+                <span class="tech-tag">C</span>
+                <span class="tech-tag">Data Structures</span>
+                <span class="tech-tag">Database</span>
+            </div>
+        </div>
+
+        <!-- C++ Projects -->
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Online Quiz System</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>MCQ-based quiz platform with timer and score calculation</p>
+            <div class="project-tech">
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">OOP</span>
+                <span class="tech-tag">File Handling</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Inventory Management</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>System for tracking stock levels, purchases, and sales</p>
+            <div class="project-tech">
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">OOP</span>
+                <span class="tech-tag">File System</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Maze Solver</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Algorithmic pathfinder for solving mazes with DFS/BFS</p>
+            <div class="project-tech">
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">Algorithms</span>
+                <span class="tech-tag">Graph Theory</span>
+            </div>
+        </div>
+
+        <!-- Java Projects -->
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Student Grading System</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Manages courses, grades, and GPA calculation</p>
+            <div class="project-tech">
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">OOP</span>
+                <span class="tech-tag">Swing</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Banking Application</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Java-based banking app with account creation and transactions</p>
+            <div class="project-tech">
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">OOP</span>
+                <span class="tech-tag">MySQL</span>
+            </div>
+        </div>
+
+        <!-- Extra Bonus -->
+        <div class="project-card">
+            <div class="project-header">
+                <h4>Compiler Design (Mini C Compiler)</h4>
+                <div class="project-links"></div>
+            </div>
+            <p>Implements lexical analysis and parsing for a subset of C language</p>
+            <div class="project-tech">
+                <span class="tech-tag">C</span>
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">Compiler</span>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- Certifications Section -->
     <section id="certifications" class="certifications">
@@ -330,13 +720,13 @@
                 <div class="cert-category">
                     <div class="cert-header">
                         <i class="fas fa-shield-alt neon-green"></i>
-                        <h3>EC-Council Certifications (2025)</h3>
+                        <h3>Cyber Security </h3>
                     </div>
                     <ul class="cert-list">
-                        <li><i class="fas fa-certificate"></i> Android Bug Bounty Hunting: Hunt Like a Rat</li>
-                        <li><i class="fas fa-certificate"></i> Introduction to Dark Web, Anonymity & Cryptocurrency</li>
-                        <li><i class="fas fa-certificate"></i> Introduction to SAN and NAS Storage</li>
-                        <li><i class="fas fa-certificate"></i> Make In-house Hacking & Pentesting Lab</li>
+                        <li><i class="fas fa-certificate"></i>EC-Council Android Bug Bounty Hunting: Hunt Like a Rat</li>
+                        <li><i class="fas fa-certificate"></i>EC-Council Introduction to Dark Web, Anonymity & Cryptocurrency</li>
+                        <li><i class="fas fa-certificate"></i>EC-Council Introduction to SAN and NAS Storage</li>
+                        <li><i class="fas fa-certificate"></i>EC-Council Make In-house Hacking & Pentesting Lab</li>
                     </ul>
                 </div>
                 <div class="cert-category">
@@ -357,9 +747,9 @@
                         <h3>C-DAC PACE (2024)</h3>
                     </div>
                     <ul class="cert-list">
-                        <li><i class="fas fa-certificate"></i> Advanced Diploma in Multilingual Programming</li>
-                        <li><i class="fas fa-certificate"></i> Java, C, C++, HTML, CSS, JavaScript</li>
-                        <li><i class="fas fa-certificate"></i> Excel, PowerPoint, Advanced Office Suite</li>
+                        <li><i class="fas fa-certificate"></i>Advanced Diploma in Multilingual Programming</li>
+                        <li><i class="fas fa-certificate"></i> Skills learnt Java, C, C++, HTML, CSS, JavaScript</li>
+                        <li><i class="fas fa-certificate"></i> Skills learnt Word, Excel, PowerPoint, Advanced Office Suite</li>
                     </ul>
                 </div>
             </div>
@@ -376,23 +766,28 @@
             <div class="contact-content">
                 <div class="contact-form-wrapper">
                     <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <i class="fas fa-user form-icon"></i>
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <i class="fas fa-envelope form-icon"></i>
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <i class="fas fa-comment form-icon"></i>
-                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary submit-btn">
-                            <i class="fas fa-paper-plane"></i>
-                            Send Message
-                        </button>
-                    </form>
+    <div class="form-group">
+        <i class="fas fa-user form-icon"></i>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+    </div>
+    <div class="form-group">
+        <i class="fas fa-envelope form-icon"></i>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+    </div>
+    <div class="form-group">
+        <i class="fas fa-phone form-icon"></i>
+        <input type="tel" id="phone" name="phone" placeholder="Your Mobile Number" required>
+    </div>
+    <div class="form-group">
+        <i class="fas fa-comment form-icon"></i>
+        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary submit-btn">
+        <i class="fas fa-paper-plane"></i>
+        Send Message
+    </button>
+</form>
+
                 </div>
             </div>
         </div>
@@ -406,19 +801,18 @@
                     <p>&copy; 2025 Jihan Bhagat | All rights reserved.</p>
                 </div>
                 <div class="social-links">
-                    <a href="#" class="social-link" data-tooltip="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="social-link" data-tooltip="LinkedIn">
+
+                    <a href="https://www.linkedin.com/in/jihan-bhagat" class="social-link" data-tooltip="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="#" class="social-link" data-tooltip="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="#" class="social-link" data-tooltip="Twitter">
-                        <i class="fab fa-twitter"></i>
+                    <a href="https://www.instagram.com/jihan_r_bhagat/" class="social-link" data-tooltip="Instagram">
+                        <i class="fab fa-instagram"></i>
                     </a>
                 </div>
+            </div>
+              <div class="footer-bottom">
+                <h5>Built by Jihan Bhagat </h5>
+                <h6>Contact me +91 8160819720 or Mail me at jihanbhagat@gmail.com</h6>
             </div>
             <div class="footer-bottom">
                 <p>Built with HTML, CSS & JavaScript</p>
@@ -437,6 +831,54 @@
             <button class="btn btn-primary" onclick="closeModal()">Close</button>
         </div>
     </div>
+<!-- Bootstrap JS Bundle (with Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Firebase (compat version so it works with file://) -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
+<script>
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBZSUYS6FG0lsTRP4wzSoUQALZ5HZoHK98",
+  authDomain: "portfolio-jihan.firebaseapp.com",
+  projectId: "portfolio-jihan",
+  storageBucket: "portfolio-jihan.firebasestorage.app",
+  messagingSenderId: "127674717214",
+  appId: "1:127674717214:web:c2c733309502f9ba358a0f",
+  measurementId: "G-7G1Z9WNSPJ"
+};
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+
+  // Contact form handler
+  document.getElementById("contactForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    try {
+      await db.collection("contacts").add({
+        name,
+        email,
+        phone,
+        message,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+      });
+
+      alert("✅ Message sent successfully!");
+      e.target.reset();
+    } catch (err) {
+      console.error("Firebase error:", err);
+      alert("❌ Failed: " + err.message);
+    }
+  });
+</script>
 
     <script src="script.js"></script>
 </body>
