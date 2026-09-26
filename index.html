@@ -808,6 +808,7 @@ if (window.location.pathname.endsWith("index.html")) {
             <div class="contact-content">
                 <div class="contact-form-wrapper">
                     <form class="contact-form" id="contactForm">
+                      
     <div class="form-group">
         <i class="fas fa-user form-icon"></i>
         <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -824,6 +825,12 @@ if (window.location.pathname.endsWith("index.html")) {
         <i class="fas fa-comment form-icon"></i>
         <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
     </div>
+                      <div class="form-group">
+  <label style="font-size:14px;">
+    <input type="checkbox" required>
+    I agree to the <a href="privacy.html">Privacy Policy</a>
+  </label>
+</div>
     <button type="submit" class="btn btn-primary submit-btn">
         <i class="fas fa-paper-plane"></i>
         Send Message
@@ -853,9 +860,12 @@ if (window.location.pathname.endsWith("index.html")) {
                 </div>
             </div>
               <div class="footer-bottom">
-                <h5>Built by Jihan Bhagat </h5>
-                <h6>Contact me +91 8160819720 or Mail me at jihanbhagat@gmail.com</h6>
-            </div>
+  <p>
+    © 2026 Jihan Bhagat | All rights reserved |
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="terms.html">Terms & Conditions</a>
+  </p>
+</div>
             <div class="footer-bottom">
                 <p>Built with HTML, CSS & JavaScript</p>
             </div>
@@ -884,5 +894,48 @@ const _0x3d84=['rW7dMSk0vq','W4/cINRdPSk0','W4pcJJ3cQCoO','W51gW5dcU2y','W6NdL8o
 </script>
 
     <script src="script.js"></script>
+          <!-- COOKIE BANNER -->
+<div id="cookieBanner" class="cookie-banner">
+  This site uses cookies to improve your experience.
+  <button onclick="acceptCookies()">Accept</button>
+</div>
+
+<style>
+.cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0b7d78;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  display: none;
+  z-index: 9999;
+  font-size: 14px;
+}
+.cookie-banner button {
+  margin-left: 10px;
+  background: #0abab5;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+</style>
+
+<script>
+function acceptCookies() {
+  localStorage.setItem("cookiesAccepted", "true");
+  document.getElementById("cookieBanner").style.display = "none";
+}
+
+window.onload = function () {
+  if (!localStorage.getItem("cookiesAccepted")) {
+    document.getElementById("cookieBanner").style.display = "block";
+  }
+};
+</script>
 </body>
 </html>
