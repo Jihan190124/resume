@@ -151,8 +151,7 @@
           </div>
         </div>
       </section>
- ```html
-<section class="more-projects" id="more-projects">
+ <section class="more-projects" id="more-projects">
   <div class="section-head">
     <p class="hand">MORE PROJECTS</p>
     <h2>A few things in the works<span> ↘</span></h2>
@@ -322,7 +321,6 @@
 
   </div>
 </section>
-```
       <section class="about paper-section" id="about">
         <div class="section-head">
           <p class="hand">THE PERSON BEHIND THE PROJECTS</p>
@@ -548,16 +546,73 @@
       <section class="contact" id="contact">
         <p class="hand">GOT SOMETHING IN MIND?</p>
         <h2>Let's build<br><span>something useful.</span></h2>
-        <p>Have a project idea, want to collaborate, or just want to talk tech?</p><a class="btn-orange"
-          href="mailto:jihanbhagat@gmail.com">Email me <i class="bi bi-arrow-up-right"></i></a>
-        <p class="contact-note">Replace the email and social links with your preferred public contact details.</p>
+        <p>Have a project idea, want to collaborate, or need help bringing something to life? Tell me about it.</p>
+
+        <div class="inquiry-form-wrap">
+          <div class="inquiry-form-heading">
+            <span class="mono">PROJECT INQUIRY / 001</span>
+            <p>Tell me about your project.</p>
+          </div>
+
+          <form id="projectInquiryForm">
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <label for="inquiryName">Your name <span aria-hidden="true">*</span></label>
+                <input type="text" id="inquiryName" name="name" placeholder="Full name"
+                  maxlength="100" autocomplete="name" required>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="inquiryEmail">Email address <span aria-hidden="true">*</span></label>
+                <input type="email" id="inquiryEmail" name="email" placeholder="you@example.com"
+                  maxlength="254" autocomplete="email" required>
+              </div>
+              <div class="col-12">
+                <label for="inquiryType">What do you want to build? <span aria-hidden="true">*</span></label>
+                <select id="inquiryType" name="projectType" required>
+                  <option value="" disabled selected>Select a project type</option>
+                  <option value="Website / Landing Page">Website / Landing Page</option>
+                  <option value="Portfolio Website">Portfolio Website</option>
+                  <option value="IoT / ESP32 Prototype">IoT / ESP32 Prototype</option>
+                  <option value="App / Dashboard">App / Dashboard</option>
+                  <option value="Cybersecurity / Networking">Cybersecurity / Networking</option>
+                  <option value="3D Printing / Electronics">3D Printing / Electronics</option>
+                  <option value="Other">Other project</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label for="inquiryBudget">Estimated budget</label>
+                <select id="inquiryBudget" name="budget">
+                  <option value="Not decided yet" selected>Not decided yet</option>
+                  <option value="Under ₹2,000">Under ₹2,000</option>
+                  <option value="₹2,000–₹5,000">₹2,000–₹5,000</option>
+                  <option value="₹5,000–₹10,000">₹5,000–₹10,000</option>
+                  <option value="₹10,000+">₹10,000+</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label for="inquiryDetails">Describe your idea <span aria-hidden="true">*</span></label>
+                <textarea id="inquiryDetails" name="details" rows="5" maxlength="3000"
+                  placeholder="What do you want to build? Include features, requirements, or deadlines."
+                  required></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn-orange" id="inquirySubmit">
+                  <span class="submit-label">Send project inquiry</span>
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </button>
+                <p id="inquiryStatus" role="status" aria-live="polite"></p>
+              </div>
+            </div>
+          </form>
+        </div>
+        <p class="contact-note">Your inquiry is submitted to Firebase Firestore. Please don't include passwords or sensitive information.</p>
       </section>
       <footer><a class="brand" href="#home">J<span>B</span><b>.</b></a><span>Designed around curiosity. Built one
           iteration at a time.</span><small>© <span class="year"></span> Jihan Bhagat</small></footer>
     </main>
   </div><button class="to-top" id="toTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 
 </html>
