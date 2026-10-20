@@ -10,12 +10,13 @@ import {
 } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.firebasestorage.app",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyBZSUYS6FG0lsTRP4wzSoUQALZ5HZoHK98",
+  authDomain: "portfolio-jihan.firebaseapp.com",
+  projectId: "portfolio-jihan",
+  storageBucket: "portfolio-jihan.firebasestorage.app",
+  messagingSenderId: "127674717214",
+  appId: "1:127674717214:web:c2c733309502f9ba358a0f",
+  measurementId: "G-7G1Z9WNSPJ"
 };
 
 let db = null;
